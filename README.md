@@ -4,21 +4,19 @@
 To design and verify basic one-bit arithmetic circuits using Verilog HDL.
 ### Theory / Synopsis
 A Half Adder adds two single-bit binary numbers, A and B, and produces a Sum and a Carry output. A Half Subtractor subtracts one single-bit binary number B from another A, producing a Difference and a Borrow output. Both circuits are purely combinational and form the basic building blocks of larger arithmetic units such as Full Adders and Full Subtractors.
-Boolean Functions
-Half Adder:
+### Boolean Functions
+### Half Adder:
 •	Sum = A ⊕ B
 •	Carry = A . B
-Half Subtractor:
+### Half Subtractor:
 •	Difference = A ⊕ B
 •	Borrow = A' . B
 
 ### Files to be Created
-File name	Purpose
-half_add_sub.v	Arithmetic-circuit RTL
-half_add_sub_tb.v	Stimulus and VCD generation
+<img width="719" height="112" alt="exp 3" src="https://github.com/user-attachments/assets/4d4510b0-1488-476d-8365-41db580345ce" />
 
-### Verilog Program
-module half_adder (
+### Design /RTL Program
+module half_adder(
     input  wire A,
     input  wire B,
     output wire Sum,
@@ -80,8 +78,9 @@ endmodule
 
 ### Truth Table
 
+<img width="719" height="336" alt="dlcd 3 (!" src="https://github.com/user-attachments/assets/4e8fd48b-e731-4b2c-a0c5-5b2190a02ce5" />
 
-<img width="645" height="87" alt="TT3" src="https://github.com/user-attachments/assets/37e33bb3-d647-45d5-b610-c255d7e41b8b" />
+
 
 ### Simulation Procedure
 
@@ -139,31 +138,10 @@ The Half Adder and Half Subtractor were realized using Verilog HDL:
 The design was compiled and simulated using Synopsys VCS, and the functionality was verified using DVE waveform analysis, matching the expected truth table.
 
 ### Output
-<img width="1920" height="1080" alt="Screenshot 2026-10-22 083734" src="https://github.com/user-attachments/assets/ae3af08d-0897-435c-bd6b-46470cc67f50" />
-<img width="1920" height="1080" alt="Screenshot 2026-10-22 083823" src="https://github.com/user-attachments/assets/f29f9d54-06d5-4dd4-8a98-b631ae397243" />
+<img width="1920" height="1080" alt="Screenshot 2026-11-06 153117" src="https://github.com/user-attachments/assets/36c0925a-1fe3-448b-a0a7-f713b77f43f5" />
 
+<img width="1920" height="1080" alt="Screenshot 2026-11-06 153211" src="https://github.com/user-attachments/assets/346e6fcd-827b-4f1a-b4a0-b0073017c069" />
 
-
-
-### Viva-Voce Questions
-
-•	What is a Half Adder, and what are its limitations compared to a Full Adder?
-
-•	What is a Half Subtractor, and what does the Borrow output signify?
-
-•	Why is the Sum/Difference expression identical (A⊕B) for both circuits, while Carry and Borrow differ?
-
-•	What gate realizes the XOR function, and why is it central to both circuits?
-
-•	What is the purpose of a Verilog testbench?
-
-•	Why is a VCD file generated, and what does $dumpvars(0, tb) do?
-
-•	What is the purpose of ./simv?
-
-•	What is the difference between simulation and synthesis?
-
-•	How would you extend this design to a Full Adder/Full Subtractor?
 
 ### Result
 
